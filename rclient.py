@@ -1,7 +1,7 @@
 import socket, sys
 s = socket.socket()
 host = socket.gethostname()
-port = 3323
+port = 2333
 s.connect((host, port))
 i=0
 while i<5:

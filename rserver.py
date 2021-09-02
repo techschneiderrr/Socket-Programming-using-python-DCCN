@@ -1,7 +1,7 @@
 import socket, sys
 s = socket.socket()
 host = socket.gethostname()
-port = 3323
+port = 2333
 
 s.bind((host,port))
 s.listen(5)
