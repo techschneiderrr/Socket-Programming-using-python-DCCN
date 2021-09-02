@@ -1,8 +1,8 @@
 import socket, sys
-s = socket.socket
+s = socket.socket()
 host = socket.gethostname()
-port = 5678
-s.connect(host, port)
+port = 3323
+s.connect((host, port))
 i=0
 while i<5:
     i+=1
