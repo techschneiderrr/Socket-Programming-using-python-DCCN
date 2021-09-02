@@ -1,4 +1,6 @@
 import socket
+from signal import signal, SIGPIPE, SIG_DFL
+signal(SIGPIPE,SIG_DFL) 
 host = socket.gethostname()
 port = 5679
 s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)

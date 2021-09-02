@@ -4,7 +4,8 @@ s.bind((socket.gethostname(),5679))
 s.listen(5)
 print('\nServer is now listening...')
 while True:
-    ctrl,adr = s.accept()
+    ctrl,addr = s.accept()
     output = 'Thankyou for connecting'
     ctrl.send(output.encode())
+    print(ctrl.recv(1024))
     ctrl.close()
