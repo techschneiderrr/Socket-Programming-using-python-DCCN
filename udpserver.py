@@ -19,4 +19,9 @@ print("UDP server up and listening")
 while True:
     bytesAddressPair = udpServerSocket.recvfrom(bufferSize)
     message = bytesAddressPair[0]
-    print(message)
+    addr = bytesAddressPair[1]
+    print("The message is : ",message)
+    print("The client IP is : ",addr)
+
+    #sending reply to client
+    udpServerSocket.sendto(bytesToSend,addr)
