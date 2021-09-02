@@ -8,5 +8,6 @@ bufferSize = 1024
 updClientSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 #send to  server using udp socket created
 updClientSocket.sendto(bytesToSend, serverAddressPort)
-
+#reciev the data fromthe server
 msgFromServer = updClientSocket.recvfrom(bufferSize)
+print(msgFromServer)
