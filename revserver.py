@@ -6,7 +6,7 @@ port = 1512
 s.bind((host,port))
 s.listen(5)
 print("The server is now listening.... at host :",host," port :",port)
-c,a = s.accept()
+c,a = s.accept()  # c=>socket , a=> address
 i=0
 while i<1:
     i+=1
