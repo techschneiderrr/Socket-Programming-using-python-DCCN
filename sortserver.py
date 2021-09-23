@@ -1,7 +1,7 @@
 import socket, sys, json
 s = socket.socket()
 host = socket.gethostname()
-port = 1518
+port = 1519
 
 s.bind((host,port))
 s.listen(5)
@@ -10,6 +10,8 @@ c,a = s.accept()  # c=>socket , a=> address
 
 while True:
     data = c.recv(1024)
+    if len(data) == 0:
+        break
     data = json.loads(data.decode())
     List_a = data.get("a")
     ele = data.get("b")
