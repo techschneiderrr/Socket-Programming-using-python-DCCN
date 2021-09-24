@@ -22,8 +22,8 @@ while True:
     print(asc)
     print("\ndescending order : ")
     print(dsc)
-    x = input('\nDo you want to continue (press 2, 4, 6 or 8 to end):')
-    if (x==2 or x==4 or x==6 or x==8) :
+    x = input('\nDo you want to continue (Y/N to end):')
+    if (x=='n' or x=='N') :
         break
     print("\n-------------- SORT ANOTHER ARRAY --------------")
 s.close()
