@@ -1,7 +1,7 @@
 import socket
 
 s = socket.socket()
-port = 60000
+port = 6008
 host = socket.gethostname()
 s.bind((host, port))
 s.listen(5)
@@ -14,13 +14,14 @@ while True:
     data = conn.recv(1024)
     print('Server recieved', repr(data))
 
-    filename = 'my.txt'
+    filename = './my.txt'
     f = open(filename, 'rb')
     l = f.read(1024)
     while(1):
-        conn.send(1)
+        conn.send(l)
         print('Sent', repr(1))
         l = f.read(1024)
+        break
     f.close()
 
     print('Done sending')
