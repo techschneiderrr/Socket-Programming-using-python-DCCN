@@ -1,7 +1,7 @@
 import socket, sys, json
 s = socket.socket()
 host = socket.gethostname()
-port = 151
+port = 3000
 
 s.bind((host,port))
 s.listen(5)
